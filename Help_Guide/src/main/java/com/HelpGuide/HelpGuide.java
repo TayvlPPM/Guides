@@ -11,7 +11,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @ComponentScan("com.HelpGuide")
-@EnableJpaRepositories("com.HelpGuide.Repository")
+@EnableJpaRepositories("com.HelpGuide.repository")
 @EntityScan("com.HelpGuide.model")
 @PropertySource({
         "classpath:application.properties"

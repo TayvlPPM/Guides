@@ -11,6 +11,6 @@
     <title>Something</title>
 </head>
 <body>
-    HUI
+    Something gone wrong? Try another URL
 </body>
 </html>

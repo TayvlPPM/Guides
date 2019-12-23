@@ -25,6 +25,7 @@
 				</div>
 			<div class="guide-panel">
 				<div id="guide-body" class="guide-body">
+					${content.document}
 				</div>
 			</div>
 		</div>
@@ -34,27 +35,27 @@
 	<script>
 		let newId = 1;
 		function getDocument(path,button){
-			var actBut = document.getElementById('active');
+			/*var actBut = document.getElementById('active');
 			//var actButSub = document;
 			if (actBut != null && actBut.id != button){
 				actBut.setAttribute("class","menu-value");
 				actBut.id = "unactive"+(newId++).toString();
-			document.getElementById("activeSub").id="unactiveSub"+newId.toString();}
+			document.getElementById("active"+'Sub').id="unactive"+(newId++).toString()+'Sub';}
 			document.getElementById(button).id="active";
 			document.getElementById(button +'Sub').id="activeSub";
-			document.getElementById("active").setAttribute("class", "active-button");
-			let targetUrl = 'http://localhost:8080/guide/' + path;
+			document.getElementById("active").setAttribute("class", "active-button");*/
+			let targetUrl = 'http://localhost:8080/guide/get_guide/' + path;
 		fetch(targetUrl)
 				.then(response => response.json())
 				.then(data => {
 					document.getElementById('guide-body').innerHTML=data.document;
-					let h1s = document.querySelectorAll('h1');
+					/*let h1s = document.querySelectorAll('h1');
 					h1s.forEach(function buildSub(x){
 						let container = document.getElementById(button+'Sub');
 						let menuSubPar = '<li><a href="#'+x.id+'\">'+x.text+'</a></li>';
 
 						container.innerHTML += menuSubPar;
-					});
+					});*/
 				})
 				.catch(error => console.error(error))
 		}
@@ -64,7 +65,7 @@
 					.then(response => response.json())
 					.then(data => {
 						data.forEach(function build(x){
-							var menuButton = '<li><p onclick="getDocument(\''+x.url+'\',this.id)" id=\"'+x.url+'\" class="menu-value">'+x.caption+'</p><ul id=\"'+x.url+'Sub'+'\"><></li>';
+							var menuButton = '<li><p onclick="getDocument(\''+x.url+'\',this.id)" id=\"'+x.url+'\" class="menu-value">'+x.caption+'</p><ul id="\"'+x.url+'Sub'+'\""></li>';
 
 							container.innerHTML += menuButton;
 						});

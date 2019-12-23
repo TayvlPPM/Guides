@@ -1,4 +1,4 @@
-package com.HelpGuide.Repository;
+package com.HelpGuide.repository;
 
 import com.HelpGuide.model.Guide;
 import org.springframework.data.jpa.repository.JpaRepository;
