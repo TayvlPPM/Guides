@@ -19,13 +19,14 @@ main {
 .guide-page{
 	font:400 16px/24px Roboto,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
 	display:grid;
-	grid-template-columns: 1fr 3fr;
+	grid-template-columns: 300px 1fr;
 	height: 100%;
 }
-
+.menu-body{
+	position: sticky;
+	top: 0;
+}
 .menu-panel{
-	overflow-y: auto;
-	overflow-x: hidden;
 	display: block;
 	padding: 24px;
 	font-weight: 500;
@@ -57,10 +58,7 @@ main {
 	cursor: default;
 }
 
-.menu-value ul{
-	display: none;
-	font-size: 12px;
-}
+
 
 .menu-value:hover{
 	background-color: #d9d9d9;
@@ -109,6 +107,36 @@ main {
 	border-radius: 15px;
 	cursor: default;
 	background-color: #d9d9d9;
+}
+
+.active-sub{
+	display: block;
+	font-size: 14px;
+}
+
+.sub-menu-val{
+	text-decoration: none;
+	color: black;
+	padding-left: 20px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.currentSub{
+	font-weight: 600;
+	text-decoration: none;
+	color: black;
+	padding-left: 20px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 170px;
+	display: inline;
+	overflow: hidden
+}
+
+.unact-sub{
+	display: none;
 }
 
 
