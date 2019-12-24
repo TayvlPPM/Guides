@@ -1,8 +1,7 @@
 package com.HelpGuide.model;
 
-import lombok.Getter;
+
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -10,8 +9,6 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "guide")
-@Getter
-@Setter
 @NoArgsConstructor
 public class Guide {
     @Id
@@ -28,5 +25,24 @@ public class Guide {
         this.url=url;
         this.capture = capture;
         this.document=document;
+    }
+
+    public void setUrl(String url){
+        this.url=url;
+    }
+    public String getUrl (){
+        return url;
+    }
+    public void setCapture(String capture){
+        this.capture=capture;
+    }
+    public String getCapture (){
+        return capture;
+    }
+    public void setDocument(String document){
+        this.document=document;
+    }
+    public String getDocument (){
+        return document;
     }
 }

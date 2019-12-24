@@ -11,6 +11,6 @@
     <title>Something</title>
 </head>
 <body>
-    Something gone wrong? Try another URL
+    Something gone wrong, try another URL
 </body>
 </html>
